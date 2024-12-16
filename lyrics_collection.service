@@ -1,0 +1,11 @@
+[Unit]
+Description=Lyrics Collection Service
+After=network.target mongod.service
+
+[Service]
+User=ubuntu
+Restart=always
+ExecStart=/bin/bash -c ". ~/.nvm/nvm.sh; nvm use v22; cd ~/services/lyrics_collection/;exec node app.js"
+
+[Install]
+WantedBy=multi-user.target

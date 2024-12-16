@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Item = require('../models/Item');
+const Item = require('../models/Item'); // это пример, не забыть потом удалить
 
 // API: Получить список элементов
 router.get('/items', async (req, res) => {
